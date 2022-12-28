@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <h1>Devil Ray Guestbook</h1>
+    <form method="POST" action="/add">
+        <div>
+            <label>Vorname</label> <br />
+            <input type="text" name="personvorname">
+        </div>
+        <div>
+            <label>Nachname</label> <br />
+            <input type="text" name="personnachname">
+        </div>
+        <div>
+            <label>Email der Person</label> <br />
+            <input type="text" name="personemail">
+        </div>
+        <div>
+            <label>Message</label> <br />
+            <input type="text" name="personmessage">
+        </div>
+        <input type="submit" value="send">
+        <% if(errors) { %>
+            <p class="error">Sorry, it seams something went wrong 🤔</p>
+            <%}%>
+
+    </form>
+    <article>
+        <%- include('./partials/list', { persons }) %>
+    </article>
+</body>
+
+</html>

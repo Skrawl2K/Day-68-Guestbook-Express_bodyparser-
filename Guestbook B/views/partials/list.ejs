@@ -1,0 +1,17 @@
+<ul>
+    <% persons.forEach(( person )=> { %>
+        <li>
+            <p class="vorname">
+                <%= person.vorname %>
+            </p>
+            <p class="mail">
+                <%= person.email %>
+
+            </p>
+            <p> writes:</p>
+            <p>
+                <%= person.message %>
+            </p>
+        </li>
+        <%});%>
+</ul>
